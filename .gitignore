@@ -1,0 +1,7 @@
+# Игнорируем секреты и временные файлы
+.env
+__pycache__/
+*.pyc
+db.sqlite
+.idea/
+.vscode/

@@ -1,10 +1,3 @@
-# Логика учёта расходов
-# Функции:
-# - parse_expense_message
-# - categorize_expense
-# - save_expense_to_db
-# core/finance.py
-
 def parse_expense_message(text: str):
     """
     Пример: 'кофе 250' → ('кофе', 250)
@@ -20,18 +13,11 @@ def parse_expense_message(text: str):
         return None, None
 
 def categorize_expense(category: str):
-    """
-    Простейшее правило. Потом можно прикрутить NLP.
-    """
     mapping = {
         "кофе": "еда",
-        "метро": "транспорт",
+        "обед": "еда",
         "такси": "транспорт",
+        "метро": "транспорт",
+        "транспорт": "транспорт",
     }
     return mapping.get(category.lower(), "другое")
-
-def save_expense_to_db(user_id: int, category: str, amount: float):
-    """
-    Заглушка — пока без реальной базы.
-    """
-    print(f"[SAVE] User: {user_id}, Category: {category}, Amount: {amount}")

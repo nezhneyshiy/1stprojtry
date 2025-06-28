@@ -22,8 +22,8 @@ async def cmd_start(message: types.Message):
     await message.answer("Привет! Я бот для учёта трат и настроения. Готов к работе!")
 
 if __name__ == "__main__":
-init_db()  # запускаем инициализацию БД 
-executor.start_polling(dp, skip_updates=True)
+    init_db()  # запускаем инициализацию БД 
+    executor.start_polling(dp, skip_updates=True)
 
 
 @dp.message_handler(lambda msg: msg.text and not msg.text.startswith("/"))

@@ -1,7 +1,9 @@
 # Игнорируем секреты и временные файлы
 .env
+*.db
+*.sqlite3
 __pycache__/
 *.pyc
-db.sqlite
-.idea/
-.vscode/
+venv/
+data/input/
+data/output/
